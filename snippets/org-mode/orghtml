@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name: orghtml
+# key: orghtml
+# --
+#+TITLE:     Main page
+#+AUTHOR:    jingpeng
+#+EMAIL:     (concat "fniessen" at-sign "pirilampo.org")
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS: H:4 num:t toc:3 html5-fancy:non-nil html-preamble:nil
+#+OPTIONS: html-style:nil html-scripts:nil toc:t author:t f:t
+#+HTML_DOCTYPE: html5
+#+HTML_CONTAINER:div
+#+HTML_LINK_HOME:
+#+html_mathjax:
+
+
+#+SETUPFILE: ./bookORG.setup
+
+

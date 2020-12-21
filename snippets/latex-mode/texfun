@@ -1,0 +1,22 @@
+# -*- mode: snippet -*-
+# name: texfun
+# key: texfun
+# --
+\begin{tabular}{|p{2cm}|p{15cm}|}
+  \hline
+  头文件: & $1 \\\
+  函数原型: & $2 \\\
+  \hline
+  函数说明: & None \\\
+  \hline
+  输入参数: & $3  \\\
+  \hline
+  传出参数: & None \\\
+  \hline
+  相关函数: & None \\\
+  \hline
+  依赖链: & None \\\
+  \hline
+  返回值: & $4 \\\
+  \hline
+\end{tabular}

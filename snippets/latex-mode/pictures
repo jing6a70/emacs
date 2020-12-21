@@ -1,0 +1,27 @@
+# -*- mode: snippet -*-
+# name: pict
+# key: pict
+# --
+\begin{figure}[H]
+\centering
+%% 图一名称
+\subfigure[$1]{
+\begin{minipage}[b]{0.45\textwidth}
+\centering
+%% 图片路径
+\includegraphics[width=1\textwidth]{$2}
+\end{minipage}
+}
+%% 图二名称
+\subfigure[$3]{
+\begin{minipage}[b]{0.45\textwidth}
+\centering
+%% 图片路径
+\includegraphics[width=1\textwidth]{$4}
+\end{minipage}
+}
+%% 主要名称
+\caption{$5}
+%% 链接跳转名称
+\label{$6}
+\end{figure}

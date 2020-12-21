@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name: tablist
+# key: tablist
+# --
+%% 头列表
+\begin{tabular}{p{10cm}p{7cm}}
+\hline
+$1            &   $2 \\\
+\hline
+\end{tabular}
+
+%% 数据段
+\begin{tabular}{p{10cm}p{7cm}}
+$3            &   $4  \\\
+\end{tabular}
+
+%% 列表尾
+\begin{tabular}{p{10cm}p{7cm}}
+$5 		&   $6 \\\
+\hline
+\end{tabular}
