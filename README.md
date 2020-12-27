@@ -14,14 +14,13 @@ git clone https://gitee.com/eeqc/emacsconfiguration.git ~/.emacs.d
 
 # Error
 ## xxx.c/xxx.cpp not in project or it is blacklist
-- xxx.c/xxx.cpp文件不在项目中, 或它被加入了黑名单
-  - 解决方案1: *删除装载黑名单的文件*, 即删除lsp-session列表文件
+- 问题原因: 1. 文件不在项目中; 2. 文件被加入黑名单;
+- 解决方案1: *删除装载黑名单的文件*, 即删除lsp-session列表文件
     ```bash
     rm ~/.emacs.d/.lsp-session-v1
     ```
     
-  - 解决方案2: *加入工程文件打开文件* `M-x` 搜索**lsp-workspace-folders-add** 快捷键: (`s-l` `F a`)
-    - 确认后将文件加入工程文件列表.
+- 解决方案2: *加入工程文件打开文件* 打开xxx.c/xxx.cpp文件, 然后按下`M-x` 搜索**lsp-workspace-folders-add** 快捷键: (`s-l` `F a`). 确认后将文件加入工程文件列表.
 
 
 
