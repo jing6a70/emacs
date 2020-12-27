@@ -1,16 +1,36 @@
+;;; init-UI.el --- 初始化Emacs软件界面
+
+;;; Commentary 注释:
+;;    <!--2018.06.08-->: { 关闭菜单栏, 工具栏, 滑动条 禁止开机启动界面, 设置默认光标类型 }
+;;    <!--2020.09.11-->: { 修改了Emacs主题UI }
+;;    <!--2018.11.22-->: { 安装ivy三大法器: ivy, swiper, counsel }
+
+
+;;; Code:
+;;  进行简约配置: 关闭菜单栏, 工具栏, 滑动条
+;;  Choose a minimalist configuration: close memubar, toolbar, scrollbar.
 (menu-bar-mode -1)
-
 (tool-bar-mode -1)
-
 (scroll-bar-mode -1)
 
-(setq inhibit-splash-screen t) ;; 禁止开机启动界面
+;; 禁止开机启动界面, 设置默认光标类型
+;; inhibit splash screen and set default cursor type
+(setq inhibit-splash-screen t)
+(setq-default cursor-type 'bar)
 
-(setq-default cursor-type 'bar) ;; 设置光标属性
+;; 设置emacs的主题UI Settings for UI theme
+(use-package doom-themes
+  :ensure
+  :init (load-theme 'doom-city-lights t))
 
+;; 一个灵活, 精简的工具, 用于在Emacs中完成迷你缓冲区
+;; flexible, simple tools for minibuffer completion in Emacs
 (use-package swiper
   :ensure t)
 
+
+;; Counsel: Emacs命令的ivy增强版本的集合
+;; Counsel, a collection of Ivy-enhanced versions of common Emacs commands.
 (use-package counsel
   :ensure t
   :config
@@ -36,6 +56,5 @@
   (global-set-key (kbd "C-x l") 'counsel-locate)
   (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
   (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history))
-
 
 (provide 'init-UI)
