@@ -1,16 +1,32 @@
-# C/C++
-## Gentoo
-- 在`/etc/portage/package.use/emacs`中支持json文件, 添加以下配置:
+# Arch Linux
+- 直接克隆
+# Gentoo Linux
+- 创建`/etc/portage/package.use/emacs`文件, 添加以下配置:
 ```bash
 app-editors/emacs json
 ```
 - 以上操作完成company-LSP将可以正常运行
 
-
-# 使用该配置
+# 克隆Emacs配置
 ```bash
 git clone https://gitee.com/eeqc/emacsconfiguration.git ~/.emacs.d
 ```
+
+# Error
+## xxx.c/xxx.cpp not in project or it is blacklist
+- xxx.c/xxx.cpp文件不在项目中, 或它被加入了黑名单
+  - 解决方案1: *删除装载黑名单的文件*, 即删除lsp-session列表文件
+    ```bash
+    rm ~/.emacs.d/.lsp-session-v1
+    ```
+    
+  - 解决方案2: *加入工程文件打开文件* `M-x` 搜索**lsp-workspace-folders-add** 快捷键: (`s-l` `F a`)
+    - 确认后将文件加入工程文件列表.
+
+
+
+
+
 
 
 
