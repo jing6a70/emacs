@@ -33,10 +33,6 @@
 ;; 集成Emacs各种扩展工具(功能性扩展)
 (require 'init-Tools)
 
-(use-package ox-hugo
-  :ensure t
-  :after ox)
-
 
 ;; (require 'htmlize)
 

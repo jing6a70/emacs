@@ -3,6 +3,8 @@
 ;;; Commentary 注解:
 ;;    <!-- 2019.01.03 -->: { 加载org-mode扩展插件 }
 ;;    <!-- 2019.01.03 -->: { 加载markdown-mode扩展插件 }
+;;    <!-- 2021.05.30 -->: { 添加了hugo博客插件 }
+
 
 ;;; Code:
 ;; 当打开.org文件则自动启用org-mode模式
@@ -19,5 +21,10 @@
 ;; Settings for markdown mode and load config frome md files
 (use-package markdown-mode
   :ensure t)
+
+;; 添加了hugo个人博客支持
+(use-package ox-hugo
+  :ensure t
+  :after ox)
 
 (provide 'init-Documents)
