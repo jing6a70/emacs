@@ -7,8 +7,11 @@
 ;;; Code:
 ;; 加入国内的elpa源 Add domestic mirror source for elpa
 (require 'package)
-(setq package-archives '(("gnu" . "http://elpa.emacs-china.org/gnu/")
-			                   ("melpa" . "http://elpa.emacs-china.org/melpa/")))
+
+(setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+                         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+
+
 (package-initialize) ;; 初始化包管理器
 
 
