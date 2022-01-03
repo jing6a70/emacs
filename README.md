@@ -9,7 +9,7 @@ app-editors/emacs json
 
 # 克隆Emacs配置
 ```bash
-git clone https://gitee.com/eeqc/emacsconfiguration.git ~/.emacs.d
+git clone https://github.com/totoro-me/mYemacs.git ~/.emacs.d
 ```
 
 # Error
