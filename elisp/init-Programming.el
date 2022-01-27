@@ -5,6 +5,7 @@
 ;;    <!-- 2020.11.27 -->: { 加载插件->LSP, 为Emacs添加了对LSP(Language server protocol)代码模糊搜索的支持 }
 ;;    <!-- 2019.06.16 -->: { 加载插件->yasnippet 并添加Emacs对代码片断的支持 }
 ;;    <!-- 2022.01.27 -->: { 加载插件->magit 简化git操作 }
+;;    <!-- 2022.01.27 -->: { c,c++,java支持代码跳转 }
 
 ;;; Code:
 ;; 配置company-mode代码补全插件的参数, 与绑定快捷键
@@ -144,10 +145,20 @@
   (add-hook 'prog-mode-hook 'yas-minor-mode)
   (yas-global-mode t))
 
+;; 配置代码跳转， 支持c, c++, java
+(use-package ggtags
+  :ensure
+  )
+
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+              (ggtags-mode 1))))
+
 
 ;; 代码跳转
-(add-hook 'c-mode-hook 'counsel-gtags-mode)
-(add-hook 'c++-mode-hook 'counsel-gtags-mode)
+;; (add-hook 'c-mode-hook 'counsel-gtags-mode)
+;; (add-hook 'c++-mode-hook 'counsel-gtags-mode)
 
 
 
