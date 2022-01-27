@@ -4,10 +4,16 @@
 ;;    <!-- 2019.06.16 -->: { 加载插件->company-mode, 为Emacs添加了代码补全的功能 }
 ;;    <!-- 2020.11.27 -->: { 加载插件->LSP, 为Emacs添加了对LSP(Language server protocol)代码模糊搜索的支持 }
 ;;    <!-- 2019.06.16 -->: { 加载插件->yasnippet 并添加Emacs对代码片断的支持 }
+;;    <!-- 2022.01.27 -->: { 加载插件->magit 简化git操作 }
 
 ;;; Code:
 ;; 配置company-mode代码补全插件的参数, 与绑定快捷键
 ;; Settings for company
+
+(use-package magit
+  :ensure
+  )
+
 (use-package company
   :ensure t
   :diminish (company-mode " Com.")

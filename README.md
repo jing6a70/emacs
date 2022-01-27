@@ -28,15 +28,21 @@ git clone https://github.com/totoro-me/mYemacs.git ~/.emacs.d
 M-x list-package
 ```
 
-- <U> 标记列表中要更新的包
-- <x> 执行所有标记
+- U 标记列表中要更新的包
+- x 执行所有标记
 
 # 快捷键
-- <F2>  打开配置文件
-- <C-x y> 选中文本翻译
 
-
-
+<table>
+    <tr>
+    	<td width="200"><code>F2</code></td>
+        <td width="600">打开配置文件</td>
+    </tr>
+    <tr>
+    	<td width="200"><code>C-x</code> + <code>y</code></td>
+        <td width="600">选中文本翻译</td>
+    </tr>
+</table>
 
 
 

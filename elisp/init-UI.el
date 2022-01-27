@@ -1,10 +1,12 @@
 ;;; init-UI.el --- 初始化Emacs软件界面
 
 ;;; Commentary 注释:
-;;    <!--2018.06.08-->: { 关闭菜单栏, 工具栏, 滑动条 禁止开机启动界面, 设置默认光标类型 }
-;;    <!--2020.09.11-->: { 修改了Emacs主题UI }
-;;    <!--2018.11.22-->: { 安装ivy三大法器: ivy, swiper, counsel }
-;;    <!--2022.01.22-->: { 添加了目录数启动快捷键 }
+;;    <!--2018.06.08-->: { 关闭: 菜单栏, 工具栏, 滑动条 禁止开机启动界面, 设置默认光标类型; }
+;;    <!--2020.09.11-->: { 修改: Emacs主题UI; }
+;;    <!--2018.11.22-->: { 安装: ivy三件套: ivy, swiper, counsel; }
+;;    <!--2022.01.22-->: { 加载: 目录数与启动快捷键; }
+;;    <!--2022.01.22-->: { 加载: FiraCode字体; 修改: FiraCode字体大小; }
+
 
 
 ;;; Code:
@@ -18,6 +20,13 @@
 ;; inhibit splash screen and set default cursor type
 (setq inhibit-splash-screen t)
 (setq-default cursor-type 'bar)
+
+
+;; 字体与字体大小设置
+;; 如果没有安装; 请安装FiraCode字体:
+;; ArchLinux: yay -S nerd-fonts-fira-code
+(set-frame-font "FiraCode Nerd Font-12")
+;; 单设置字体大小(set-face-attribute 'default nil :height 135)
 
 ;; 设置emacs的主题UI Settings for UI theme
 (use-package doom-themes
