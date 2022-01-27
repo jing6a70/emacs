@@ -139,4 +139,10 @@
   (yas-global-mode t))
 
 
+;; 代码跳转
+(add-hook 'c-mode-hook 'counsel-gtags-mode)
+(add-hook 'c++-mode-hook 'counsel-gtags-mode)
+
+
+
 (provide 'init-Programming)

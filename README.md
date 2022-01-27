@@ -23,6 +23,19 @@ git clone https://github.com/totoro-me/mYemacs.git ~/.emacs.d
 - 解决方案2: *加入工程文件打开文件* 打开xxx.c/xxx.cpp文件, 然后按下`M-x` 搜索**lsp-workspace-folders-add** 快捷键: (`s-l` `F a`). 确认后将文件加入工程文件列表.
 
 
+# Emacs 包管理器
+```bash
+M-x list-package
+```
+
+- <U> 标记列表中要更新的包
+- <x> 执行所有标记
+
+# 快捷键
+- <F2>  打开配置文件
+- <C-x y> 选中文本翻译
+
+
 
 
 

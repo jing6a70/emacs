@@ -4,6 +4,7 @@
 ;;    <!--2018.06.08-->: { 关闭菜单栏, 工具栏, 滑动条 禁止开机启动界面, 设置默认光标类型 }
 ;;    <!--2020.09.11-->: { 修改了Emacs主题UI }
 ;;    <!--2018.11.22-->: { 安装ivy三大法器: ivy, swiper, counsel }
+;;    <!--2022.01.22-->: { 添加了目录数启动快捷键 }
 
 
 ;;; Code:
@@ -56,5 +57,15 @@
   (global-set-key (kbd "C-x l") 'counsel-locate)
   (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
   (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history))
+
+;; 目录树
+(use-package neotree
+  :ensure
+  :config
+  (global-set-key [f8] 'neotree-toggle)
+  (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+  )
+
+
 
 (provide 'init-UI)
