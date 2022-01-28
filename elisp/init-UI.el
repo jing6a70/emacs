@@ -5,8 +5,8 @@
 ;;    <!--2020.09.11-->: { 修改: Emacs主题UI; }
 ;;    <!--2018.11.22-->: { 安装: ivy三件套: ivy, swiper, counsel; }
 ;;    <!--2022.01.22-->: { 加载: 目录数与启动快捷键; }
-;;    <!--2022.01.22-->: { 加载: FiraCode字体; 修改: FiraCode字体大小; }
-
+;;    <!--2022.01.27-->: { 加载: FiraCode字体; 修改: FiraCode字体大小; }
+;;    <!--2022.01.28-->: { 修复: neotree-dir缺少图标icons, 加载: all-the-icons }
 
 
 ;;; Code:
@@ -73,6 +73,10 @@
   :config
   (global-set-key [f8] 'neotree-toggle)
   (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+  )
+;; 支持目录树的图标 neotree-dir需要
+(use-package all-the-icons
+  :ensure
   )
 
 
