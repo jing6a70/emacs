@@ -83,4 +83,9 @@ describe-mode
 - `C-C C-c P-u` 上传到远程仓库
 
 
+# treemacs 目录树
+- `C-x t t` : 打开目录树
+- `M-0` : 目录树与程序页面的切换
 
+# global 代码阅读
+- `M-.` 查看引用
