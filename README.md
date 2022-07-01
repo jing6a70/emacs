@@ -1,7 +1,8 @@
 # 克隆Emacs配置
 ```bash
-git clone https://github.com/jp0513/emacs.git ~/.emacs.d
+git clone https://github.com/jingpeng0513/emacs.git ~/.emacs.d
 ```
+
 - 克隆完成后，需要手动安装一下`use-package`, 按下快捷键`ALT` + `x`后输入:
 ```bash
 package-install use-package
@@ -12,6 +13,7 @@ package-install use-package
 ```bash
 app-editors/emacs json
 ```
+
 - 以上操作完成company-LSP将可以正常运行
 
 ## LSP报错： xxx.c/xxx.cpp not in project or it is blacklist
@@ -73,12 +75,12 @@ describe-mode
 
 
 # magit
-`C-x g` magit-status 进入magit
--`s` 添加某个文件进入追踪
--`u` 删除光标所在文件推出追踪
-`C-c C-c c` magit-commit 提交界面进行输入
-`C-c C-c` 提交上一步的信息
-`p-u` 上传到远程仓库
+- `C-x g` magit-status 进入magit
+- `s` 添加某个文件进入追踪
+- `u` 删除光标所在文件推出追踪
+- `C-c C-c c` magit-commit 提交界面进行输入
+- `C-c C-c` 提交上一步的信息
+- `C-C C-c P-u` 上传到远程仓库
 
 
 
