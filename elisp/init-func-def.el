@@ -3,8 +3,9 @@
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 
-
-
+(defun open-e2macs-man()
+  (interactive)
+  (find-file "~/.emacs.d/README.md"))
 
 
 (provide 'init-func-def)
