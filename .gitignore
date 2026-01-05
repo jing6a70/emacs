@@ -1,5 +1,10 @@
-elpa
-auto-save-list
+.cache/
 .lsp-session-v1
-.cache
 recentf
+session.*
+transient/
+url/
+*.elc
+auto-save-list/
+*.session
+
