@@ -1,6 +1,6 @@
 # 克隆Emacs配置
 ```bash
-git clone https://github.com/jingpeng0513/emacs.git ~/.emacs.d
+git clone https://github.com/jing6a70/emacs.git ~/.emacs.d
 ```
 
 - 克隆完成后，需要手动安装一下`use-package`, 按下快捷键`ALT` + `x`后输入:
