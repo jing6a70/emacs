@@ -7,4 +7,6 @@ url/
 *.elc
 auto-save-list/
 *.session
+eln-cache/
+elpa/
 
