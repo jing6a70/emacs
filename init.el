@@ -50,6 +50,21 @@
 (require 'init-func-def)
 (require 'init-func-key)
 
+;; 启用 Org Babel
+(require 'org)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ ;; 按需启用需要的语言，示例包含常用的几种
+ '((python . t)    ; 启用 Python
+   (shell . t)     ; 启用 Shell/Bash
+   (js . t)        ; 启用 JavaScript
+   (emacs-lisp . t)))
+
+;; 可选：允许自动执行代码（无需每次确认）
+(setq org-confirm-babel-evaluate nil)
+
+(setenv "SUDO_ASKPASS" "/home/jingpeng/.emacs.d/sh/emacs-askpass.sh")
+(setq org-babel-shell-command "bash -i")
 
 (with-eval-after-load 'counsel-gtags
   (define-key counsel-gtags-mode-map (kbd "M-t") 'counsel-gtags-find-definition)
