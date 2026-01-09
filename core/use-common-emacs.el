@@ -1,14 +1,16 @@
-;;; init-Editing.el --- Emacs 编辑功能适配 Emacs: The editing function is appropriate
-
-;;; Commentary 注解:
-;;    <!--2018.06.08-->: { 添加了关闭自动创建备份文件功能 }
-;;    <!--2018.06.08-->: { 添加了打开Emacs行号功能 }
-;;    <!--2018.06.08-->: { 配置了自动补全括号功能 }
-;;    <!--2018.11.23-->: { 配置了设置4个空格表示tab各数功能 }
-;;    <!--2018.11.23-->: { 安装了hungry-delete插件, 用于自动删除多余空格 }
-
-
 ;;; Code:
+;;  进行简约配置: 关闭菜单栏, 工具栏, 滑动条
+;;  Choose a minimalist configuration: close memubar, toolbar, scrollbar.
+(menu-bar-mode t)
+(tool-bar-mode -1)
+(scroll-bar-mode t)
+
+;; 禁止开机启动界面, 设置默认光标类型
+;; inhibit splash screen and set default cursor type
+(setq inhibit-splash-screen t)
+(setq-default cursor-type 'bar)
+
+
 ;; 关闭自动创建备份文件的功能
 ;;  Disables the generation of backup files
 (setq make-backup-files nil)
@@ -28,13 +30,5 @@
 (setq c-default-style "linux")      ;; 设置样式为'linux'      Set style to "linux"
 (setq-default tab-width 4)          ;; 设置默认tab键的宽度     Set width of default tab key
 
-
-;; 自动删除多余空格
-;;  Remove redundant spaces automatically
-(use-package hungry-delete
-  :ensure t
-  :config
-    (global-hungry-delete-mode))
-
-
-(provide 'init-Editing)
+;; docstring 长度设置,防止lsp-mode报警
+(setq byte-compile-docstring-max-column 120)
