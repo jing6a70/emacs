@@ -2,7 +2,7 @@
 
 # 🚀 Emacs Custom IDE:  C/C++ IDE
 
-## [English Version](./README.md) / [中文版本](./README.md)
+## [English Version](./README.md) / [中文版本](./README_CN.md)
 
 This is a personalized Emacs configuration repository, designed to turn Emacs into an **out-of-the-box, efficient, and smooth all-purpose programming environment**. It is especially optimized for C/C++ development, balancing usability and powerful features, allowing you to get rid of tedious configurations and focus on coding itself.
 

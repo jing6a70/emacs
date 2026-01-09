@@ -2,7 +2,7 @@
 
 # 🚀 Emacs Custom CFG: 定制C/C++ 开发环境
 
-## [English Version](./README.md) / [中文版本](./README.md)
+## [English Version](./README.md) / [中文版本](./README_CN.md)
 
 这是一个个人定制化的 Emacs 配置仓库，旨在将 Emacs 打造成**开箱即用、高效流畅的全能编程环境**，尤其针对 C/C++ 开发进行了深度优化，兼顾易用性与强大功能，让你摆脱繁琐配置，专注于代码本身。
 
