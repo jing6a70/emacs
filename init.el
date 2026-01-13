@@ -32,19 +32,21 @@
 ;; 加载各USE配置
 (add-to-list 'load-path (expand-file-name "modules" user-emacs-directory))
 (defvar my/local-modules
-  '(use-vertico
-    use-companymode
-    use-lspmode
-    use-treemacs
-    use-magit
-    use-orgmode
-    use-yasnippet
-    use-hungry-delete))
+  '(use-vertico        ;; Emacs 系统补全框架
+    use-companymode    ;; 代码补全基础
+    use-lspmode        ;; 语言协议服务器 language server protocol
+    use-treemacs       ;; 左侧边项目树USE包
+    use-magit          ;; Git管理工具USE包
+    use-orgmode        ;; org文档编写USE包
+    use-yasnippet      ;; 代码片段支持USE
+    use-hungry-delete  ;; 快速删除多余空格USE
+    use-undo-tree      ;; C-x u可视化树
+    ))
 (dolist (module my/local-modules)
   (require module nil 'noerror))
 
 ;; 自定义功能与键绑定
 ;; (require 'init-func-def)
-;; (require 'init-func-key)
+
 
 

@@ -1,93 +1,76 @@
 <img src="./apex.jpg" title="" alt="" width="724">
 
-# 🚀 Emacs Custom IDE:  C/C++ IDE
+# 🚀 Emacs Custom CFG: 定制C/C++ 开发环境
 
 ## [English Version](./README.md) / [中文版本](./README_CN.md)
 
-This is a personalized Emacs configuration repository, designed to turn Emacs into an **out-of-the-box, efficient, and smooth all-purpose programming environment**. It is especially optimized for C/C++ development, balancing usability and powerful features, allowing you to get rid of tedious configurations and focus on coding itself.
+这是一个个人定制化的 Emacs 配置仓库，旨在将 Emacs 打造成**开箱即用、高效流畅的全能编程环境**，尤其针对 C/C++ 开发进行了深度优化，兼顾易用性与强大功能，让你摆脱繁琐配置，专注于代码本身。
 
-### ✨ Core Features
+## ✨ 核心特性
 
-#### 🧠 Intelligent Code Completion & Navigation (LSP Integration)
+### 🧠 智能代码补全与导航（LSP 集成）
 
-- Integrates **Language Server Protocol (LSP)** to provide industrial-grade code intelligence support.
+- 集成 **Language Server Protocol (LSP)**，提供工业级别的代码智能支持
+- 支持**模糊匹配代码补全**，快速筛选所需候选，大幅提升编码效率
+- 完整支持**跳转定义、查找引用、重命名、代码诊断**等核心功能，媲美主流 IDE
 
-- Supports **fuzzy matching code completion** for quickly filtering candidates and greatly improving coding efficiency.
+### 🔧 一站式 C/C++ IDE 解决方案
 
-- Full support for core features such as **go to definition, find references, rename, and code diagnostics**, comparable to mainstream IDEs.
+- 自定义优化 C/C++ 开发流程，具备**完整项目管理、高效代码导航**能力
+- 内置**调试支持**，无缝对接调试工具，快速定位代码问题
+- 针对 C/C++ 语法高亮、缩进、格式化进行专项优化，符合工业编码规范
 
-#### 🔧 One-Stop C/C++ IDE Solution
+### 🚀 内置多语言代码片段（YASnippet）
 
-- Custom-optimized C/C++ development workflow with **complete project management and efficient code navigation** capabilities.
+- 集成 YASnippet，预置多种主流编程语言的常用代码模板
+- 一键插入代码块（循环、条件判断、函数定义、注释模板等），减少重复编码
+- 支持自定义扩展代码片段，适配个人编码习惯与项目需求
 
-- Built-in **debugging support**, seamlessly connecting to debugging tools for quickly locating code issues.
+### 📦 开箱即用，安装简便
 
-- Special optimization for C/C++ syntax highlighting, indentation, and formatting, complying with industrial coding standards.
+- 无需复杂的环境配置，克隆后直接运行 Emacs 即可使用
+- 兼容 Emacs 29+ 原生 `use-package`，低版本提供简易补装方案
 
-#### 🚀 Built-in Multi-Language Code Snippets (YASnippet)
+## 🛠 快速安装
 
-- Integrates YASnippet with preset common code templates for multiple mainstream programming languages.
+### 1. 克隆配置仓库
 
-- One-click insertion of code blocks (loops, conditionals, function definitions, comment templates, etc.) to reduce repetitive coding.
-
-- Supports custom extended code snippets to adapt to personal coding habits and project requirements.
-
-#### 📦 Easy Installation, Out-of-the-Box
-
-- No complex environment configuration required; run Emacs directly after cloning.
-
-- Compatible with Emacs 29+ native `use-package`; provides a simple supplementary installation solution for lower versions.
-
-### 🛠 Quick Installation
-
-#### 1. Clone the Configuration Repository
-
-Clone the repository directly to the `~/.emacs.d` directory (overwrites existing configuration; back up important data in advance):
+直接将仓库克隆到 `~/.emacs.d` 目录（覆盖原有配置，请提前备份重要数据）：
 
 ```bash
 git clone https://github.com/jing6a70/emacs.git ~/.emacs.d
 ```
 
-#### 2. Run Emacs
-
-After cloning, start Emacs directly in the terminal or desktop environment:
+### 2. 运行 Emacs
 
 ```bash
 emacs
 ```
 
-#### 3. Compatibility for Older Emacs Versions (< 29)
+### 3. 低版本 Emacs 兼容处理（< 29）
 
-Emacs 29 comes with the core dependency `use-package` natively. For versions below 29, manually install it after starting Emacs:
+**Emasc版本29|| 29+ 请忽略此步骤** Emacs 29 已自带 `use-package` 核心依赖，若使用 29 以下版本，启动 Emacs 后需手动安装 ：
 
-1. Press the shortcut `Alt + x` (to invoke the M-x command panel).
-
-2. Enter the following command and press Enter, then wait for the installation to complete:
-
-```elisp
+```bash
 package-install use-package
 ```
 
-### 📂 Project Directory Structure
+### 📂 工程目录结构
 
-```plain
+```textile
 ~/.emacs.d/
-├── core/        # Core configuration files (initialization, global settings, etc.)
-├── moduls/      # Independent configuration items for each plugin (on-demand loading, personalized settings)
-├── elisp/       # Custom processing functions (extending Emacs native features)
-└── snippets/    # Code snippet repository (YASnippet templates, multi-language support)
+├── core/        # 核心配置文件（初始化、全局设置等）
+├── moduls/      # 各插件独立配置项（按需加载、个性化配置）
+├── elisp/       # 自定义处理函数（扩展 Emacs 原生功能）
+└── snippets/    # 代码片段仓库（YASnippet 模板，支持多语言）
 ```
 
-### 📝 Supplementary Notes
+## 📝 补充说明
 
-1. On the first startup, Emacs will automatically download and install required plugins; ensure network connectivity.
+1. 首次启动 Emacs 时，会自动下载并安装所需插件，需保证网络通畅
+2. 若需修改 C/C++ 相关配置，可查看 `moduls/` 目录下对应的 LSP 配置文件
+3. 自定义代码片段可直接放入 `snippets/` 对应语言目录，重启 Emacs 即可生效
 
-2. To modify C/C++ related configurations, check the corresponding LSP configuration files in the `moduls/` directory.
+### ⭐ 如果这个配置对你有帮助，欢迎给仓库点个 Star 支持一下！
 
-3. Custom code snippets can be directly placed in the corresponding language directory under `snippets/`; restart Emacs to take effect.
-
----
-
-### ⭐If this configuration helps you, please give the repository a Star to show your support!
-
-### ⭐⭐⭐ Thank you! ⭐⭐⭐
+### ⭐⭐⭐谢谢⭐⭐⭐
